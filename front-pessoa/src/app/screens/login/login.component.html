@@ -1,0 +1,17 @@
+<p-toast></p-toast>
+<div class="flex align-items-center justify-content-center min-h-screen w-full">
+  <div class="surface-card  p-3 sm:p-3 login-card" style="border-radius: 15px;">      
+      <div class="p-field">
+        <label for="username" class="login-label">Usuário</label>
+        <input id="username" #usernameInput type="text" pInputText [(ngModel)]="userName" name="username" class="w-full login-input" placeholder="Digite seu usuário" />
+      </div>
+      <div class="p-field">
+        <label for="password" class="login-label">Senha</label>
+        <input id="password" #passwordIpunt type="password" [(ngModel)]="password" name="password" class="w-full login-input" placeholder = "Digite sua senha" />
+      </div>
+      <div class="p-field mt-4 flex justify-content-between w-full">
+        <button pButton label="Acessar" type="submit" icon="pi pi-sign-in" class="w-48 p-button-lg login-button" (click)="onLoginClick()"></button>
+        <button pButton label="Novo usuário" type="button" icon="pi pi-user-plus" class="w-48 p-button-lg login-button" [routerLink]="'/cadastro-usuario'"></button>
+      </div>
+  </div>
+</div>
